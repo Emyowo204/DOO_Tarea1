@@ -1,3 +1,4 @@
-package PACKAGE_NAME;public class CocaCola {
+package TESTING_1;
+public class CocaCola {
 }
 stat

@@ -1,2 +1,3 @@
-package PACKAGE_NAME;public class Fanta {
+package TESTING_1;
+public class Fanta {
 }

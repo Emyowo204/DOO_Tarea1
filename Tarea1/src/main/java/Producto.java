@@ -1,5 +1,3 @@
-
-
 public abstract class Producto {
     private int serie;
     private String sabor;
