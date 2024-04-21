@@ -1,3 +1,7 @@
 package TESTING_1;
-public class Bebida {
+public abstract class Bebida extends Producto {
+    public Bebida() {
+        super();
+    }
+    public abstract String sabor();
 }

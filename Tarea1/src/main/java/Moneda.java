@@ -1,3 +1,4 @@
 package TESTING_1;
-public interface Moneda {
+public abstract class Moneda implements Comparable {
+    public abstract int compareTo(Object o);
 }
