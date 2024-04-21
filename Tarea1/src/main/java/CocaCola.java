@@ -1,10 +1,9 @@
 package TESTING_1;
 public class CocaCola extends Bebida {
-    public CocaCola() {
-        super();
+    public CocaCola(int serie) {
+        super(serie);
     }
     public String sabor() {
         return "cocacola";
     }
 }
-stat

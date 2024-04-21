@@ -1,7 +1,7 @@
 package TESTING_1;
 public class Fanta extends Bebida {
-    public Fanta() {
-        super();
+    public Fanta(int serie) {
+        super(serie);
     }
     public String sabor() {
         return "fanta";

@@ -1,7 +1,9 @@
+package TESTING_1;
 public class Snickers extends Dulce{
-
-    public Snickers(int n, String s) {
-        super(n, s);
+    public Snickers(int serie) {
+        super(serie);
     }
-
+    public String sabor() {
+        return "snickers";
+    }
 }

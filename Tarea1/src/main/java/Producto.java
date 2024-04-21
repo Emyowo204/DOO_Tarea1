@@ -1,12 +1,11 @@
+package TESTING_1;
 public abstract class Producto {
     private int serie;
-    private String sabor;
-
+    public Producto(int sr) {
+        serie = sr;
+    }
     public int getSerie() {
         return serie;
     }
-    public Producto(int n, String s){
-        serie = n;
-        sabor = s;
-    }
+    public abstract String sabor();
 }

@@ -1,7 +1,7 @@
 package TESTING_1;
 public class Sprite extends Bebida {
-    public Sprite() {
-        super();
+    public Sprite(int serie) {
+        super(serie);
     }
     public String sabor() {
         return "sprite";
