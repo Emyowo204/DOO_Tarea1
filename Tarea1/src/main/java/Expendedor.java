@@ -40,29 +40,15 @@ public class Expendedor {
     public Producto comprarProducto(Moneda moneda, int select) {
         if(moneda == null)
             return null;
+        if(select<=0 || select>=6) {
+            depoVuelto.addContenido(moneda);
+            return null;
+        }
         Producto producto = null;
 
-        int precio = 0;
-        switch(select-1) {
-            case 0:
-                precio = Seleccion.CocaCola.getPrecio();
-                break;
-            case 1:
-                precio = Seleccion.Sprite.getPrecio();
-                break;
-            case 2:
-                precio = Seleccion.Fanta.getPrecio();
-                break;
-            case 3:
-                precio = Seleccion.Snickers.getPrecio();
-                break;
-            case 4:
-                precio = Seleccion.Super8.getPrecio();
-                break;
-            case 5:
-                precio = Seleccion.Flippy.getPrecio();
-                break;
-        }
+        Seleccion compra = Seleccion.values()[select-1];
+        int precio = compra.getPrecio();
+
         int vuelto = moneda.getValor() - precio;
         if(vuelto >= 0) {
             producto = (Producto) listDepositos.get(select-1).getContenido();

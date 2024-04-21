@@ -3,12 +3,11 @@ public class Comprador{
     private String sabor;
     private int vuelto;
     public Comprador(Moneda m, int cualBebida, Expendedor exp){
-
         Producto p = exp.comprarProducto(m,cualBebida);
 
-        if(p!= null){
+        if(p!= null) {
             sabor = p.sabor();
-        }else{
+        } else {
             sabor=null;
         }
         Moneda monVuelto=null;
@@ -23,10 +22,10 @@ public class Comprador{
         }
 
     }
-    public int cuantoVuelto(){
+    public int cuantoVuelto() {
         return vuelto;
     }
-    public String queSabor(){
+    public String queSabor() {
         return sabor;
     }
 }
