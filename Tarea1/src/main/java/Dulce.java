@@ -1,3 +1,6 @@
-package TESTING_1;
-public class Dulce {
+public abstract class Dulce extends Producto {
+
+    public Dulce(int n, String s) {
+        super(n, s);
+    }
 }
