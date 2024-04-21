@@ -1,2 +1,3 @@
-package PACKAGE_NAME;public class Comprador {
+package TESTING_1;
+public class Comprador {
 }

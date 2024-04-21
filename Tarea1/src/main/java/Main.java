@@ -1,2 +1,3 @@
-package PACKAGE_NAME;public class Main {
+package TESTING_1;
+public class Main {
 }

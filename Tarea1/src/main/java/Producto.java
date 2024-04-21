@@ -1,2 +1,3 @@
-package PACKAGE_NAME;public class Producto {
+package TESTING_1;
+public class Producto {
 }

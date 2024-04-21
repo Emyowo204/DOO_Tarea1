@@ -1,2 +1,3 @@
-package PACKAGE_NAME;public class Super8 {
+package TESTING_1;
+public class Super8 {
 }
