@@ -1,5 +1,4 @@
 package TESTING_1;
-
 import java.util.ArrayList;
 
 public enum Seleccion {

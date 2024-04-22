@@ -4,7 +4,7 @@ public class Moneda1000 extends Moneda {
         super();
     }
     public int getValor() {
-        return 500;
+        return 1000;
     }
     @Override
     public int compareTo(Object o) {

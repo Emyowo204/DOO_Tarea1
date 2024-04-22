@@ -2,8 +2,8 @@ package TESTING_1;
 public class Comprador{
     private String sabor;
     private int vuelto;
-    public Comprador(Moneda m, int cualBebida, Expendedor exp){
-        Producto p = exp.comprarProducto(m,cualBebida);
+    public Comprador(Moneda m, int selectProducto, Expendedor exp){
+        Producto p = exp.comprarProducto(m,selectProducto);
 
         if(p!= null) {
             sabor = p.sabor();

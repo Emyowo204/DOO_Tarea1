@@ -32,8 +32,8 @@ public class Expendedor {
                         newDepo.addContenido(new Flippy(j + 600));
                         break;
                 }
-                listDepositos.add(newDepo);
             }
+            listDepositos.add(newDepo);
         }
     }
 
@@ -51,7 +51,8 @@ public class Expendedor {
 
         int vuelto = moneda.getValor() - precio;
         if(vuelto >= 0) {
-            producto = (Producto) listDepositos.get(select-1).getContenido();
+            Deposito depto_producto = listDepositos.get(select-1);
+            producto = (Producto) depto_producto.getContenido();
             if(producto == null) {
                 depoVuelto.addContenido(moneda);
                 return null;
