@@ -2,12 +2,12 @@ package TESTING_1;
 import java.util.ArrayList;
 
 public enum Seleccion {
-    CocaCola(100),
-    Sprite(200),
-    Fanta(300),
-    Snickers(400),
-    Super8(500),
-    Flippy(600);
+    CocaCola(800),
+    Sprite(800),
+    Fanta(800),
+    Snickers(600),
+    Super8(400),
+    Flippy(500);
     private final int precio;
     Seleccion (int precio) {
         this.precio = precio;

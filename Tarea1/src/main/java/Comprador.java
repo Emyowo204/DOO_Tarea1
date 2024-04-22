@@ -4,14 +4,13 @@ public class Comprador{
     private int vuelto;
     public Comprador(Moneda m, int selectProducto, Expendedor exp){
         Producto p = exp.comprarProducto(m,selectProducto);
-
+        vuelto = 0;
         if(p!= null) {
             sabor = p.sabor();
         } else {
             sabor=null;
         }
         Moneda monVuelto=null;
-
         while (true) {
             monVuelto = exp.getVuelto();
             if (monVuelto == null) {
@@ -20,7 +19,6 @@ public class Comprador{
                 vuelto += monVuelto.getValor();
             }
         }
-
     }
     public int cuantoVuelto() {
         return vuelto;
