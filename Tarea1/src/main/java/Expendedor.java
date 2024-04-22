@@ -39,7 +39,7 @@ public class Expendedor {
 
     public Producto comprarProducto(Moneda moneda, int select) {
         if(moneda == null)
-            return null;
+            throw new PagoIncorrectoException("Método de pago invalido");
         if(select<=0 || select>=6) {
             depoVuelto.addContenido(moneda);
             return null;
@@ -54,7 +54,7 @@ public class Expendedor {
             producto = listDepositos.get(select-1).getContenido();
             if(producto == null) {
                 depoVuelto.addContenido(moneda);
-                return null;
+                throw new NoHayProductoException("Producto seleccionado agotado");
             }
             Moneda m_vuelto = null;
             for (int i = 0; i < vuelto; i+=100) {
@@ -62,8 +62,10 @@ public class Expendedor {
                 depoVuelto.addContenido(m_vuelto);
             }
         }
-        else
+        else {
             depoVuelto.addContenido(moneda);
+            throw new PagoInsuficienteException("Pago insuficiente");
+        }
         return producto;
     }
     public Moneda getVuelto() {

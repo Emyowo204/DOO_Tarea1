@@ -1,20 +1,20 @@
 package TESTING_1;
 public class Main {
     public static void main(String[] args) {
-        Expendedor exp = new Expendedor(2);
+        Expendedor exp = new Expendedor(0);
         Moneda m = null;
         Comprador c=null;
-        m = null;
-        c = new Comprador(m,1,exp);
-        System.out.println(c.queSabor()+", "+c.cuantoVuelto()); // cocacola $700
-        m = new Moneda1000();
-        c = new Comprador(m,2,exp);
-        System.out.println(c.queSabor()+", "+c.cuantoVuelto()); // cocacola $700
-        m = new Moneda1000();
-        c = new Comprador(m,45,exp);
-        System.out.println(c.queSabor()+", "+c.cuantoVuelto());// cocacola $700
-        m = new Moneda100();
-        c = new Comprador(m,4,exp);
-        System.out.println(c.queSabor()+", "+c.cuantoVuelto()); // cocacola $700
+
+        try {
+            m = new Moneda100();
+            c = new Comprador(m,1,exp);
+            System.out.println(c.queSabor()+", "+c.cuantoVuelto());
+        } catch (NoHayProductoException e) {
+            System.out.println(e.getMessage());
+        } catch (PagoInsuficienteException e) {
+            System.out.println(e.getMessage());
+        } catch (PagoIncorrectoException e) {
+            System.out.println(e.getMessage());
+        }
     }
 }
