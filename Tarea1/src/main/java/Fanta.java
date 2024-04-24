@@ -1,0 +1,18 @@
+package DOO_Expendedor;
+/** Clase Fanta
+ * Hija de la clase Bebida */
+
+public class Fanta extends Bebida {
+
+    /** Método Fanta()
+     * @param serie entero con el número de serie del producto */
+    public Fanta(int serie) {
+        super(serie);
+    }
+
+    /** Método sabor()
+     * retorna el String "fanta" como el sabor del producto */
+    public String sabor() {
+        return "fanta";
+    }
+}
