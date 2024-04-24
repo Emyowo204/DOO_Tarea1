@@ -1,2 +1,3 @@
-package PACKAGE_NAME;public class Main {
+package DOO_Expendedor;
+public class Main {
 }
