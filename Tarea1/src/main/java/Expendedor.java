@@ -69,7 +69,7 @@ public class Expendedor {
         }
         Producto producto = null;
         //Precio y vuelto del producto elegido
-        int precio = 800; //Preio genérico; Agregar precio
+        int precio = Seleccion.values()[select-1].getPrecio();
         int vuelto = moneda.getValor() - precio;
         if(vuelto >= 0) {
             producto = listDepositos.get(select-1).getContenido();
