@@ -59,28 +59,33 @@ public class Expendedor {
      * @return 'producto', Instancia de 'Producto' con el producto comprado
      * retorna un puntero null si la compra no se completa correctamente */
     public Producto comprarProducto(Moneda moneda, int select) {
+        //Moneda con puntero null (No existe moneda)
         if(moneda == null)
             return null;
+        //Selección del producto fuera del rango para elegir
         if(select<=0 || select>6) {
             depoVuelto.addContenido(moneda);
             return null;
         }
-
         Producto producto = null;
+        //Precio y vuelto del producto elegido
         int precio = 800; //Preio genérico; Agregar precio
         int vuelto = moneda.getValor() - precio;
         if(vuelto >= 0) {
             producto = listDepositos.get(select-1).getContenido();
+            //Deposito vacio (No queda producto elegido)
             if(producto == null) {
                 depoVuelto.addContenido(moneda);
                 return null;
             }
+            //Creación de las instancias 'Moneda100' en depoVuelto para el vuelto del producto
             Moneda m_vuelto = null;
             for (int i = 0; i < vuelto; i+=100) {
                 m_vuelto = new Moneda100();
                 depoVuelto.addContenido(m_vuelto);
             }
         }
+        //Pago menor al precio del producto
         else {
             depoVuelto.addContenido(moneda);
             return null;
