@@ -11,7 +11,7 @@ public class Sprite extends Bebida {
     }
 
     /** Método sabor()
-     * retorna el String "sprite" como el sabor del producto */
+     * @return el String "sprite" como el sabor del producto */
     public String sabor() {
         return "sprite";
     }

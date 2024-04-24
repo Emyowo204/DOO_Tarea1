@@ -11,7 +11,7 @@ public class Fanta extends Bebida {
     }
 
     /** Método sabor()
-     * retorna el String "fanta" como el sabor del producto */
+     * @return el String "fanta" como el sabor del producto */
     public String sabor() {
         return "fanta";
     }

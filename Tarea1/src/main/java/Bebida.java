@@ -1,6 +1,6 @@
 package DOO_Expendedor;
 /** Clase abstracta Bebida
- * Hija de la clase Producto */
+ * Hija de la clase Producto y Madre de las clases CocaCola, Sprite y Fanta */
 
 public class Bebida{
 
@@ -11,7 +11,7 @@ public class Bebida{
     }
 
     /** Método abstracto sabor()
-     * retorna un String con el sabor del producto */
+     * @return String con el sabor del producto */
     public String sabor() {
         return null;
     }

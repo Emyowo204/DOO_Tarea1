@@ -11,7 +11,7 @@ public class CocaCola extends Bebida {
     }
 
     /** Método sabor()
-     * retorna el String "cocacola" como el sabor del producto */
+     * @return el String "cocacola" como el sabor del producto */
     public String sabor() {
         return "cocacola";
     }
