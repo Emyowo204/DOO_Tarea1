@@ -25,7 +25,7 @@ public class Deposito<T> {
 
     /** Método getContenido()
      * @return un objeto genérico que se remueve de la primera posición de Arraylist 'contenido'
-     * @return null si el tamaño de 'çontenido' es igual a 0 */
+     * retorna un puntero null si el tamaño de 'çontenido' es igual a 0 */
     public T getContenido() {
         if(contenido.size() == 0){
             return null;
