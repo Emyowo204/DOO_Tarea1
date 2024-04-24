@@ -1,12 +1,17 @@
 package DOO_Expendedor;
-// Clase abstracta Bebida
-// Hija de la clase Producto
+/** Clase abstracta Bebida
+ * Hija de la clase Producto */
+
 public class Bebida{
-    // Método Bebida, tiene como parametro la serie del producto
+
+    /** Método Bebida()
+     * @param serie entero con el número de serie del producto */
     public Bebida(int serie) {
 
     }
-    // Método abstracto que retorna el sabor del producto
+
+    /** Método abstracto sabor()
+     * retorna un String con el sabor del producto */
     public String sabor() {
         return null;
     }
