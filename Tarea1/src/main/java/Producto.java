@@ -1,10 +1,12 @@
 package DOO_Expendedor;
+
 /** Clase abstracta Producto
  * Súper clase (Madre) de las clases Bebida y Dulce */
 
 public abstract class Producto {
 
-    /** Propiedad 'serie', entera privada, que guarda la serie del Producto */
+    /** Propiedad privada 'serie'
+     * Número entero que guarda la serie del Producto */
     private int serie;
 
     /** Método Producto()
