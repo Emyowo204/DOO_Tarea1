@@ -61,11 +61,11 @@ public class Expendedor {
     public Producto comprarProducto(Moneda moneda, int select) {
         //Moneda con puntero null (No existe moneda)
         if(moneda == null)
-            return null;
+            throw new PagoIncorrectoException("Método de pago invalido");
         //Selección del producto fuera del rango para elegir
         if(select<=0 || select>6) {
             depoVuelto.addContenido(moneda);
-            return null;
+            throw new NoHayProductoException("Producto seleccionado inexistente");
         }
         Producto producto = null;
         //Precio y vuelto del producto elegido
@@ -76,7 +76,7 @@ public class Expendedor {
             //Deposito vacio (No queda producto elegido)
             if(producto == null) {
                 depoVuelto.addContenido(moneda);
-                return null;
+                throw new NoHayProductoException("Producto seleccionado agotado");
             }
             //Creación de las instancias 'Moneda100' en depoVuelto para el vuelto del producto
             Moneda m_vuelto = null;
@@ -88,7 +88,7 @@ public class Expendedor {
         //Pago menor al precio del producto
         else {
             depoVuelto.addContenido(moneda);
-            return null;
+            throw new PagoInsuficienteException("Pago insuficiente");
         }
         return producto;
     }
