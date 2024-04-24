@@ -1,6 +1,6 @@
 package DOO_Expendedor;
 /** Clase Sprite
- * Hija de la clase Bebida */
+ * Sub clase (Hija) de la clase Bebida */
 
 public class Sprite extends Bebida {
 

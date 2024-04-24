@@ -1,6 +1,6 @@
 package DOO_Expendedor;
 /** Clase abstracta Producto
- * Madre de las clases Bebida y Dulce */
+ * Súper clase (Madre) de las clases Bebida y Dulce */
 
 public abstract class Producto {
 

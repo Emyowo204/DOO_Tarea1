@@ -1,6 +1,6 @@
 package DOO_Expendedor;
 /** Clase Fanta
- * Hija de la clase Bebida */
+ * Sub clase (Hija) de la clase Bebida */
 
 public class Fanta extends Bebida {
 
