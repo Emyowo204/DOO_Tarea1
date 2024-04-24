@@ -1,5 +1,5 @@
 package TESTING_1;
-import javax.swing.*;
+import java.lang.Class;
 import java.util.ArrayList;
 
 public class Expendedor {
@@ -8,7 +8,6 @@ public class Expendedor {
     public Expendedor(int numProductos) {
         listDepositos = new ArrayList<>();
         depoVuelto = new Deposito<>();
-
         for(int i=0; i<6; i++) {
             Deposito<Producto> newDepo = new Deposito<>();
             for(int j=0; j<numProductos; j++) {
@@ -29,26 +28,23 @@ public class Expendedor {
                         newDepo.addContenido(new Super8(j + 500));
                         break;
                     case 5:
-                        newDepo.addContenido(new Flippy(j + 600));
+                        newDepo.addContenido(new Flipy(j + 600));
                         break;
                 }
             }
             listDepositos.add(newDepo);
         }
     }
-
     public Producto comprarProducto(Moneda moneda, int select) {
         if(moneda == null)
             throw new PagoIncorrectoException("Método de pago invalido");
-        if(select<=0 || select>=6) {
+        if(select<=0 || select>6) {
             depoVuelto.addContenido(moneda);
-            return null;
+            throw new NoHayProductoException("Producto seleccionado inexistente");
         }
+
         Producto producto = null;
-
-        Seleccion compra = Seleccion.values()[select-1];
-        int precio = compra.getPrecio();
-
+        int precio = Seleccion.values()[select-1].getPrecio();
         int vuelto = moneda.getValor() - precio;
         if(vuelto >= 0) {
             producto = listDepositos.get(select-1).getContenido();

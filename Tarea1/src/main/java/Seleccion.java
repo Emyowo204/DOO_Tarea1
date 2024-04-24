@@ -7,7 +7,7 @@ public enum Seleccion {
     Fanta(800),
     Snickers(600),
     Super8(400),
-    Flippy(500);
+    Flipy(500);
     private final int precio;
     Seleccion (int precio) {
         this.precio = precio;

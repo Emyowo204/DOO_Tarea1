@@ -1,12 +1,12 @@
 package TESTING_1;
 public class Main {
     public static void main(String[] args) {
-        Expendedor exp = new Expendedor(0);
+        Expendedor exp = new Expendedor(2);
         Moneda m = null;
         Comprador c=null;
 
         try {
-            m = new Moneda100();
+            m = new Moneda1000();
             c = new Comprador(m,1,exp);
             System.out.println(c.queSabor()+", "+c.cuantoVuelto());
         } catch (NoHayProductoException e) {
