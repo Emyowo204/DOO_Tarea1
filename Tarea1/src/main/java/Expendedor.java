@@ -20,9 +20,8 @@ public class Expendedor {
      * @param numProductos, número entero con la cantidad de productos que tiene cada deposito de 'listDepositos'
      * Método para la crear y llenar los depositos del expendedor*/
     public Expendedor(int numProductos) {
-        // Creación instancia ArrayList y Deposito para listDepositos y depoVuelto respectivamente
+        // Creación instancia ArrayList para listDepositos
         listDepositos = new ArrayList<>();
-        depoVuelto = new Deposito<>();
         // Ciclo for para crear instancias de 'Deposito' para añadir a listDepositos
         for(int i=0; i<6; i++) {
             Deposito<Producto> newDepo = new Deposito<>();
@@ -59,6 +58,8 @@ public class Expendedor {
      * @return 'producto', Instancia de 'Producto' con el producto comprado
      * retorna un puntero null si la compra no se completa correctamente */
     public Producto comprarProducto(Moneda moneda, int select) {
+        // Creación instancia de Deposito depoVuelto, de esta forma cada compra tiene su propio vuelto
+        depoVuelto = new Deposito<>();
         //Moneda con puntero null (No existe moneda)
         if(moneda == null)
             throw new PagoIncorrectoException("Método de pago invalido");

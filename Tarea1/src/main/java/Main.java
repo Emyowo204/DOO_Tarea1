@@ -6,8 +6,8 @@ public class Main {
         Comprador c=null;
 
         try {
-            m = new Moneda100();
-            c = new Comprador(m,1,exp);
+            m = new Moneda1000();
+            c = new Comprador(m,8,exp);
             System.out.println(c.queSabor()+", "+c.cuantoVuelto());
         } catch (NoHayProductoException e) {
             System.out.println(e.getMessage());
@@ -16,5 +16,8 @@ public class Main {
         } catch (PagoIncorrectoException e) {
             System.out.println(e.getMessage());
         }
+        m = new Moneda1000();
+        c = new Comprador(m,1,exp);
+        System.out.println(c.queSabor()+", "+c.cuantoVuelto());
     }
 }
