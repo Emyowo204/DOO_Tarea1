@@ -1,12 +1,18 @@
 package DOO_Expendedor;
 
-// Clase hija Dulce
+/** Clase Snickers
+ * Sub clase (Hija) de la clase Dulce */
+
 public class Snickers extends Dulce{
-    // Método Snickers, tiene como parametro la serie del producto
+
+    /** Método Snickers()
+     * @param serie entero con el número de serie del producto */
     public Snickers(int serie) {
         super(serie);
     }
-    // Método que retorna el sabor del producto
+
+    /** Método sabor()
+     * @return el String "snickers" como el sabor del producto */
     public String sabor() {
         return "snickers";
     }

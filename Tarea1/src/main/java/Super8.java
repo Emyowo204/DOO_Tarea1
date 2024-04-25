@@ -1,12 +1,17 @@
 package DOO_Expendedor;
 
-// Clase hija Dulce
+/** Clase Super8
+ * Sub clase (Hija) de la clase Dulce */
 public class Super8 extends Dulce{
-    // Método Super8, tiene como parametro la serie del producto
+
+    /** Método Super8()
+     * @param serie entero con el número de serie del producto */
     public Super8(int serie) {
         super(serie);
     }
-    // Método que retorna el sabor del producto
+
+    /** Método sabor()
+     * @return el String "super8" como el sabor del producto */
     public String sabor() {
         return "super8";
     }

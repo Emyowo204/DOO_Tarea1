@@ -1,13 +1,17 @@
 package DOO_Expendedor;
 
-// Clase abstracta Dulce
-// Hija de la clase Producto
+/** Clase abstracta Dulce
+ * Sub clase (Hija) de la clase Producto
+ * Súper clase (Madre) de las clases Flipy, Super8 y Snickers */
 public abstract class Dulce extends Producto {
-    // Método Dulce, tiene como parametro la serie del producto
+
+    /** Método Dulce()
+     * @param serie entero con el número de serie del producto */
     public Dulce(int serie) {
         super(serie);
     }
 
-    // Método abstracto que retorna el sabor del producto
+    /** Método abstracto sabor()
+     * @return String con el sabor del producto */
     public abstract String sabor();
 }

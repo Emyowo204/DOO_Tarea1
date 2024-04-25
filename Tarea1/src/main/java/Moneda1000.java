@@ -1,12 +1,16 @@
 package DOO_Expendedor;
 
-//Clase extendida de la interfaz Moneda
+/** Clase Moneda1000
+ * Sub clase (Hija) de la clase Moneda */
 public class Moneda1000 extends Moneda {
-    //Constructor de moneda1000
+
+    /** Método Moneda1000() */
     public Moneda1000() {
         super();
     }
-    //Metodo getValor retorna el valor 1000
+
+    /** Método getValor()
+     * @return el int 1000 como el valor de la moneda */
     public int getValor() {
         return 1000;
     }

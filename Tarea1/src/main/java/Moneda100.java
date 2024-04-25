@@ -1,15 +1,20 @@
 package DOO_Expendedor;
 
-//Clase extendida de la interfaz Moneda
+/** Clase Moneda100
+ * Sub clase (Hija) de la clase Moneda */
 public class Moneda100 extends Moneda {
-    //Constructor de moneda100
+
+    /** Método Moneda100() */
     public Moneda100() {
         super();
     }
-    //Metodo getValor retorna el valor 100
+
+    /** Método getValor()
+     * @return el int 100 como el valor de la moneda */
     public int getValor() {
         return 100;
     }
+
     @Override
     public int compareTo(Object o) {
         return 0;
