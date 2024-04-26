@@ -2,6 +2,7 @@ package DOO_Expendedor;
 
 /** Clase Moneda100
  * Sub clase (Hija) de la clase Moneda */
+
 public class Moneda100 extends Moneda {
 
     /** Método Moneda100() */
