@@ -12,11 +12,11 @@ public enum Seleccion {
     Super8(400),
     Flipy(500);
 
-    /** Número entero que contiene el precio de un de los productos */
+    /** Número entero que contiene el precio de uno de los productos */
     private final int precio;
 
     /** Constructor donde se iguala el precio entregado por el Enum a la propiedad 'precio'
-     * @param precio Número entero con el precio de un de los productos */
+     * @param precio Número entero con el precio de uno de los productos */
     Seleccion (int precio) {
         this.precio = precio;
     }

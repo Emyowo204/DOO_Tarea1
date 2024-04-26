@@ -17,9 +17,9 @@ public class Moneda1000 extends Moneda {
         return 1000;
     }
 
-    /** Método de la interfaz 'Comparable' para comparar este Objeto con otro Objeto
-     * @param o El Objeto a comparar
-     * @return Número entero dependiendo si este Objeto es menor, igual o mayor que el Objeto especificado.*/
+    /** Método de la interfaz 'Comparable' para comparar este Objeto con otro objeto
+     * @param o El objeto a comparar
+     * @return Número entero dependiendo si este objeto es menor, igual o mayor que el objeto especificado */
     @Override
     public int compareTo(Object o) {
         return 0;

@@ -1,6 +1,6 @@
 package DOO_Expendedor;
 
-/** Gomitas bicapas de gelatina en forma de delfines, que se pueden comprar utilizando dinero
+/** Unas gomitas bicapas de gelatina en forma de delfines, que se pueden comprar utilizando dinero
  * @author Chloe Yañez Lavin
  * @author Emily Osvaldo Gaete Bobadilla */
 

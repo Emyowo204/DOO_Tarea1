@@ -2,16 +2,15 @@ package DOO_Expendedor;
 
 /** El main en donde se realiza el programa
  * @author Chloe Yañez Lavin
- * @author Emily Osvaldo Gaete Bobadilla
- * @see Exception Se utilizan excepciones de este archivo para realizar los try y catch */
+ * @author Emily Osvaldo Gaete Bobadilla */
 
 public class Main {
     public static void main(String[] args) {
 
-        Expendedor exp = new Expendedor(1);
+        Expendedor exp = new Expendedor(8);
         Moneda m = new Moneda500();
         Comprador c = null;
-        int select = 5;
+        int select = 4;
 
         try {
             c = new Comprador(m, select, exp);

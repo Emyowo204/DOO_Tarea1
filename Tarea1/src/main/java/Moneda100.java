@@ -18,8 +18,8 @@ public class Moneda100 extends Moneda {
     }
 
     /** Método de la interfaz 'Comparable' para comparar este Objeto con otro Objeto
-     * @param o El Objeto a comparar
-     * @return Número entero dependiendo si este Objeto es menor, igual o mayor que el Objeto especificado.*/
+     * @param o El objeto a comparar
+     * @return Número entero dependiendo si este Objeto es menor, igual o mayor que el Objeto especificado */
     @Override
     public int compareTo(Object o) {
         return 0;

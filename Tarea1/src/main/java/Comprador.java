@@ -16,7 +16,7 @@ public class Comprador {
      * @param moneda Una moneda que se utiliza para comprar el producto
      * @param selectProducto Número entero que contiene la selección del producto
      * @param exp Un expendedor en donde se va a comprar el producto */
-    public Comprador(Moneda moneda, int selectProducto, Expendedor exp) {
+    public Comprador(Moneda moneda, int selectProducto, Expendedor exp) throws Exception {
         vuelto = 0;
         Producto p = exp.comprarProducto(moneda,selectProducto);
         if(p!= null) {
@@ -39,7 +39,7 @@ public class Comprador {
     }
 
     /** Método para obtener la cantidad del vuelto recibido en la compra del producto
-     * @return Número entero con el total del vuelto recibido del expdendedor */
+     * @return Número entero con el total del vuelto recibido del expendedor */
     public int cuantoVuelto() {
         return vuelto;
     }
