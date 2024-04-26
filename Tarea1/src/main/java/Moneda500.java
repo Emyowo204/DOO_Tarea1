@@ -11,7 +11,7 @@ public class Moneda500 extends Moneda {
         super();
     }
 
-    /** Método para obtener el valor economico de la moneda
+    /** Método para obtener el valor económico de la moneda
      * @return Número entero con el valor 500 de la moneda */
     public int getValor() {
         return 500;

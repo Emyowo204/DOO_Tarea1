@@ -1,17 +1,18 @@
 package DOO_Expendedor;
 
-/** Clase abstracta Dulce
- * Sub clase (Hija) de la clase Producto
- * Súper clase (Madre) de las clases Flipy, Super8 y Snickers */
+/** Un producto comestible y dulce que se puede comprar utilizando dinero
+ * @author Chloe Yañez Lavin
+ * @author Emily Osvaldo Gaete Bobadilla */
+
 public abstract class Dulce extends Producto {
 
-    /** Método Dulce()
-     * @param serie entero con el número de serie del producto */
+    /** Constructor que guarda el número de serie del dulce
+     * @param serie Número entero con la serie del dulce */
     public Dulce(int serie) {
         super(serie);
     }
 
-    /** Método abstracto sabor()
-     * @return String con el sabor del producto */
+    /** Método para obtener el sabor (nombre) del dulce
+     * @return String con el sabor del dulce */
     public abstract String sabor();
 }

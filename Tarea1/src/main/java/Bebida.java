@@ -1,18 +1,18 @@
 package DOO_Expendedor;
 
-/** Clase abstracta Bebida;
- * Sub clase (Hija) de la clase Producto;
- * Súper clase (Madre) de las clases CocaCola, Sprite y Fanta */
+/** Un producto bebestible y gaseoso que se puede comprar utilizando dinero
+ * @author Chloe Yañez Lavin
+ * @author Emily Osvaldo Gaete Bobadilla */
 
 public abstract class Bebida extends Producto {
 
-    /** Método Bebida(): Obtiene el número de serie de la bebida
-     * @param serie Entero con el número de serie del producto */
+    /** Constructor que guarda el número de serie de la bebida
+     * @param serie Número entero con la serie de la bebida */
     public Bebida(int serie) {
         super(serie);
     }
 
-    /** Método sabor(): sirve para indentificar el sabor de la bebida
-     * @return String con el sabor del producto */
+    /** Método para obtener el sabor (nombre) de la bebida
+     * @return String con el sabor de la bebida */
     public abstract String sabor();
 }

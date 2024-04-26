@@ -1,17 +1,19 @@
 package DOO_Expendedor;
 
-/** Clase Flipy
- * Sub clase (Hija) de la clase Dulce */
+/** Gomitas bicapas de gelatina en forma de delfines, que se pueden comprar utilizando dinero
+ * @author Chloe Yañez Lavin
+ * @author Emily Osvaldo Gaete Bobadilla */
+
 public class Flipy extends Dulce{
 
-    /** Método Flipy()
-     * @param serie entero con el número de serie del producto */
+    /** Constructor que guarda el número de serie del Flipy
+     * @param serie Número entero con la serie del Flipy */
     public Flipy(int serie) {
         super(serie);
     }
 
-    /** Método sabor()
-     * @return el String "flipy" como el sabor del producto */
+    /** Método para obtener el sabor (nombre) del Flipy
+     * @return String "flipy" como su sabor */
     public String sabor() {
         return "flipy";
     }

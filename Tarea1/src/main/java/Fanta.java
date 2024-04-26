@@ -1,18 +1,19 @@
 package DOO_Expendedor;
 
-/** Clase Fanta
- * Sub clase (Hija) de la clase Bebida */
+/** Una bebida azucarada de sabor a naranja, que se puede comprar utilizando dinero
+ * @author Chloe Yañez Lavin
+ * @author Emily Osvaldo Gaete Bobadilla */
 
 public class Fanta extends Bebida {
 
-    /** Método Fanta()
-     * @param serie entero con el número de serie del producto */
+    /** Constructor que guarda el número de serie de la Fanta
+     * @param serie Número entero con la serie de la Fanta */
     public Fanta(int serie) {
         super(serie);
     }
 
-    /** Método sabor()
-     * @return el String "fanta" como el sabor del producto */
+    /** Método para obtener el sabor (nombre) de la Fanta
+     * @return String "fanta" como su sabor */
     public String sabor() {
         return "fanta";
     }

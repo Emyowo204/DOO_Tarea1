@@ -1,18 +1,19 @@
 package DOO_Expendedor;
 
-/** Clase Snickers
- * Sub clase (Hija) de la clase Dulce */
+/** Una barra de chocolate con turrón y mantequilla de maní, que se puede comprar utilizando dinero
+ * @author Chloe Yañez Lavin
+ * @author Emily Osvaldo Gaete Bobadilla */
 
 public class Snickers extends Dulce{
 
-    /** Método Snickers()
-     * @param serie entero con el número de serie del producto */
+    /** Constructor que guarda el número de serie del Snickers
+     * @param serie Número entero con la serie del Snickers */
     public Snickers(int serie) {
         super(serie);
     }
 
-    /** Método sabor()
-     * @return el String "snickers" como el sabor del producto */
+    /** Método para obtener el sabor (nombre) del Snickers
+     * @return String "snickers" como su sabor */
     public String sabor() {
         return "snickers";
     }

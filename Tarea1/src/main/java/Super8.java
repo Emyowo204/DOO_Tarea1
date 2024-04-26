@@ -1,17 +1,19 @@
 package DOO_Expendedor;
 
-/** Clase Super8
- * Sub clase (Hija) de la clase Dulce */
+/** Una galleta con capas de barquillo y recubierta de chocolate, que se puede comprar utilizando dinero
+ * @author Chloe Yañez Lavin
+ * @author Emily Osvaldo Gaete Bobadilla */
+
 public class Super8 extends Dulce{
 
-    /** Método Super8()
-     * @param serie entero con el número de serie del producto */
+    /** Constructor que guarda el número de serie del Super8
+     * @param serie Número entero con la serie del Super8 */
     public Super8(int serie) {
         super(serie);
     }
 
-    /** Método sabor()
-     * @return el String "super8" como el sabor del producto */
+    /** Método para obtener el sabor (nombre) del Super8
+     * @return String "super8" como su sabor */
     public String sabor() {
         return "super8";
     }

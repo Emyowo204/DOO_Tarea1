@@ -9,7 +9,7 @@ public abstract class Moneda implements Comparable {
     /** Constructor por defecto de Moneda */
     public Moneda() {}
 
-    /** Método para obtener el valor economico de la moneda
+    /** Método para obtener el valor económico de la moneda
      * @return Número entero con el valor de la moneda */
     public abstract int getValor();
 

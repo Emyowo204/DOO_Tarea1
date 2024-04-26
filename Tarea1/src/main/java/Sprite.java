@@ -1,18 +1,19 @@
 package DOO_Expendedor;
 
-/** Clase Sprite
- * Sub clase (Hija) de la clase Bebida */
+/** Una bebida azucarada de sabor a lima y limón, que se puede comprar utilizando dinero
+ * @author Chloe Yañez Lavin
+ * @author Emily Osvaldo Gaete Bobadilla */
 
 public class Sprite extends Bebida {
 
-    /** Método CocaCola()
-     * @param serie entero con el número de serie del producto */
+    /** Constructor que guarda el número de serie de la Sprite
+     * @param serie Número entero con la serie de la Sprite */
     public Sprite(int serie) {
         super(serie);
     }
 
-    /** Método sabor()
-     * @return el String "sprite" como el sabor del producto */
+    /** Método para obtener el sabor (nombre) de la Sprite
+     * @return String "sprite" como su sabor*/
     public String sabor() {
         return "sprite";
     }

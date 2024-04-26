@@ -1,6 +1,6 @@
 package DOO_Expendedor;
 
-/** Un Objeto que se puede comprar utilizando un pago, se puede almacenar en un deposito
+/** Un Objeto que se puede comprar utilizando dinero, se puede almacenar en un deposito
  * @author Chloe Yañez Lavin
  * @author Emily Osvaldo Gaete Bobadilla */
 
