@@ -1,27 +1,24 @@
 package DOO_Expendedor;
 import java.util.ArrayList;
 
-/** Clase Expendedor
- * Esta clase utiliza la clase Java ArrayList */
+/** Un expendedor que al ingresar una moneda y un número devuelve un producto y su vuelto
+ * @author Chloe Yañez Lavin
+ * @author Emily Osvaldo Gaete Bobadilla
+ * @see Exception Se utilizan excepciones de este archivo en esta clase */
 
 public class Expendedor {
 
-    /** Propiedad privada 'listDepositos'
-     * ArrayList de instancias de 'Deposito' de tipo 'Producto'
-     * Es una lista de todos los depositos del expendedor, con un producto distinto cada uno */
+    /** Lista de todos los depositos del expendedor, con un producto distinto en cada deposito */
     private ArrayList<Deposito<Producto>> listDepositos;
 
-    /** Propiedad privada 'depoVuelto'
-     * Instancia de 'Deposito', se guarda una lista de instancias de 'Moneda100'
-     * Esto constituye al vuelto de la compra, utilizando monedas de 100 */
+    /** Deposito de monedas donde se guarda el vuelto de la compra en monedas de 100 */
     private Deposito<Moneda> depoVuelto;
 
-    /** Método Expendedor()
-     * @param numProductos, número entero con la cantidad de productos que tiene cada deposito de 'listDepositos'
-     * Método para la crear y llenar los depositos del expendedor*/
+    /** Constructor para crear y llenar los depositos del expendedor con productos
+     * @param numProductos Número entero con la cantidad de productos que tiene cada deposito de 'listDepositos' */
     public Expendedor(int numProductos) {
-        // Creación instancia ArrayList para listDepositos
         listDepositos = new ArrayList<>();
+        depoVuelto = new Deposito<>();
         // Ciclo for para crear instancias de 'Deposito' para añadir a listDepositos
         for(int i=0; i<6; i++) {
             Deposito<Producto> newDepo = new Deposito<>();
@@ -52,14 +49,14 @@ public class Expendedor {
         }
     }
 
-    /** Método comprarProducto()
-     * @param moneda, intancia de 'Moneda', que se utiliza para comprar un producto'
-     * @param select, número entero con la selección del producto a comprar'
-     * @return 'producto', Instancia de 'Producto' con el producto comprado
-     * retorna un puntero null si la compra no se completa correctamente */
+    /** Método para comprar un producto del expendedor, sacandolo de uno de sus depositos
+     * @param moneda Una moneda que se utiliza para comprar el producto'
+     * @param select Número entero con la selección del producto a comprar'
+     * @return Instancia de 'Producto' con el producto comprado,
+     * @throws PagoIncorrectoException Se lanza esta excepción si no existe una moneda para pagar (null)
+     * @throws NoHayProductoException Se lanza esta excepción si no queda o no existe el producto seleccionado
+     * @throws PagoInsuficienteException Se lanza esta excepción si el pago es menor al precio del producto */
     public Producto comprarProducto(Moneda moneda, int select) {
-        // Creación instancia de Deposito depoVuelto, de esta forma cada compra tiene su propio vuelto
-        depoVuelto = new Deposito<>();
         //Moneda con puntero null (No existe moneda)
         if(moneda == null)
             throw new PagoIncorrectoException("Método de pago invalido");
@@ -94,9 +91,8 @@ public class Expendedor {
         return producto;
     }
 
-    /** Método getVuelto()
-     * @return una instancia de 'Moneda100' del Deposito 'depoVuelto'
-     * retorna un puntero null si el Deposito 'depoVuelto' está vacio */
+    /** Método para devolver una primera moneda del deposito de vuelto del expendedor
+     * @return Una moneda de 100 del vuelto, cuando se vacia el deposito retorna null*/
     public Moneda getVuelto() {
         return depoVuelto.getContenido();
     }

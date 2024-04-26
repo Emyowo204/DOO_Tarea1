@@ -1,25 +1,22 @@
 package DOO_Expendedor;
 
-/** Clase Comprador
- * Esta clase utiliza 'Expendedor' y 'Moneda' para comprar el producto */
+/** Un comprador que desea comprar un producto de una expendedora con una moneda, obteniendo un sabor y un vuelto
+ * @author Chloe Yañez Lavin
+ * @author Emily Osvaldo Gaete Bobadilla */
 
 public class Comprador {
 
-    /** Propiedad privada 'sabor'
-     * String que contiene el sabor del producto */
+    /** String que contiene el sabor del producto */
     private String sabor;
 
-    /** Propiedad privada 'vuelto'
-     * Número entero que contiene el vuelto total de la compra del producto */
+    /** Número entero que contiene el vuelto total de la compra del producto */
     private int vuelto;
 
-    /** Método Expendedor()
-     * @param moneda, instancia de 'Moneda' para comprar un producto
-     * @param selectProducto, número entero que contiene la selección del producto
-     * @param exp, instancia de 'Expendedor' donde se va acomprar el producto
-     * Método utiliza el método comprarProducto() de 'Expendedor' para comprar un producto
-     * Luego iguala el sabor y el vuelto con sus respectivas propiedades */
-    public Comprador(Moneda moneda, int selectProducto, Expendedor exp){
+    /** Constructor en donde se compra el producto y se obtiene su sabor y el vuelto
+     * @param moneda Una moneda que se utiliza para comprar el producto
+     * @param selectProducto Número entero que contiene la selección del producto
+     * @param exp Un expendedor en donde se va a comprar el producto */
+    public Comprador(Moneda moneda, int selectProducto, Expendedor exp) {
         vuelto = 0;
         Producto p = exp.comprarProducto(moneda,selectProducto);
         if(p!= null) {
@@ -41,14 +38,14 @@ public class Comprador {
         }
     }
 
-    /** Método cuantoVuelto()
-     * @return 'vuelto', número entero con el total del vuelto recibido por la compra */
+    /** Método para obtener la cantidad del vuelto recibido en la compra del producto
+     * @return Número entero con el total del vuelto recibido del expdendedor */
     public int cuantoVuelto() {
         return vuelto;
     }
 
-    /** Método queSabor()
-     * @return 'sabor', String que contiene el sabor del producto comprado */
+    /** Método para obtener el sabor del producto (El nombre del producto)
+     * @return String que contiene el sabor del producto comprado */
     public String queSabor() {
         return sabor;
     }

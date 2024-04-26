@@ -1,23 +1,28 @@
 package DOO_Expendedor;
+
+/** El main en donde se realiza el programa
+ * @author Chloe Yañez Lavin
+ * @author Emily Osvaldo Gaete Bobadilla
+ * @see Exception Se utilizan excepciones de este archivo para realizar los try y catch */
+
 public class Main {
     public static void main(String[] args) {
+
         Expendedor exp = new Expendedor(1);
-        Moneda m = null;
-        Comprador c=null;
+        Moneda m = new Moneda500();
+        Comprador c = null;
+        int select = 5;
 
         try {
-            m = new Moneda1000();
-            c = new Comprador(m,8,exp);
-            System.out.println(c.queSabor()+", "+c.cuantoVuelto());
-        } catch (NoHayProductoException e) {
-            System.out.println(e.getMessage());
-        } catch (PagoInsuficienteException e) {
-            System.out.println(e.getMessage());
+            c = new Comprador(m, select, exp);
+            System.out.println("Sabor: "+c.queSabor());
+            System.out.println("Vuelto: "+c.cuantoVuelto());
         } catch (PagoIncorrectoException e) {
             System.out.println(e.getMessage());
+            System.out.println("Sin producto\nSin vuelto");
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            System.out.println("Sin producto\n"+"Vuelto: "+exp.getVuelto().getValor());
         }
-        m = new Moneda1000();
-        c = new Comprador(m,1,exp);
-        System.out.println(c.queSabor()+", "+c.cuantoVuelto());
     }
 }
