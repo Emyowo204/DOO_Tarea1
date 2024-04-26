@@ -1,27 +1,27 @@
 package DOO_Expendedor;
 
-/** Clase abstracta Producto
- * Súper clase (Madre) de las clases Bebida y Dulce */
+/** Un Objeto que se puede comprar utilizando un pago, se puede almacenar en un deposito
+ * @author Chloe Yañez Lavin
+ * @author Emily Osvaldo Gaete Bobadilla */
 
 public abstract class Producto {
 
-    /** Propiedad privada 'serie'
-     * Número entero que guarda la serie del Producto */
+    /** Número entero que guarda el número de serie del producto */
     private int serie;
 
-    /** Método Producto()
-     * @param sr entero con el número de serie del producto, se guarda en la propiedad 'serie' */
+    /** Constructor donde se guarda el número de serie del producto
+     * @param sr Número entero con la serie del producto */
     public Producto(int sr) {
         serie = sr;
     }
 
-    /** Método getSerie()
-     * @return 'serie', un entero con el número de serie del producto */
+    /** Método para obtener el número de serie del producto
+     * @return Número entero con la serie del producto */
     public int getSerie() {
         return serie;
     }
 
-    /** Método sabor()
-     * @return un String con el sabor del producto */
+    /** Método para obtener el sabor (nombre) del producto
+     * @return String con el sabor del producto */
     public abstract String sabor();
 }

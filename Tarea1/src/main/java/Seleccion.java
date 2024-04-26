@@ -1,8 +1,8 @@
 package DOO_Expendedor;
 
-/** Clase Enum Seleccion
- * Este Enum contiene una lista de los productos, junto con sus precios
- * Producto(precio) */
+/** Una lista (Enum) de los productos del expendedor, con sus respectivos precios
+ * @author Chloe Yañez Lavin
+ * @author Emily Osvaldo Gaete Bobadilla */
 
 public enum Seleccion {
     CocaCola(800),
@@ -12,19 +12,17 @@ public enum Seleccion {
     Super8(400),
     Flipy(500);
 
-    /** Propiedad privada final 'precio'
-     * Número entero que contiene el precio de un de los productos */
+    /** Número entero que contiene el precio de un de los productos */
     private final int precio;
 
-    /** Método Seleccion()
-     * @param precio, número entero con el precio de un de los productos
-     * Iguala el precio entregado por el Enum a la propiedad 'precio' */
+    /** Constructor donde se iguala el precio entregado por el Enum a la propiedad 'precio'
+     * @param precio Número entero con el precio de un de los productos */
     Seleccion (int precio) {
         this.precio = precio;
     }
 
-    /** Método getPrecio()
-     * @return 'precio', número entero con el precio del producto elegido por Seleccion() */
+    /** Método que entrega el precio de un producto del expendedor
+     * @return Número entero con el precio del producto elegido */
     public int getPrecio() {
         return precio;
     }
