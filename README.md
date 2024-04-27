@@ -4,5 +4,5 @@
 - Abril 2024
   
 # Estudiantes (Grupo 8):
-- Chloe Yañez Lavin
+- Chloe Yáñez Lavín
 - Emily Osvaldo Gaete Bobadilla
